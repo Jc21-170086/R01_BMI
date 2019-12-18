@@ -17,5 +17,17 @@ namespace R01_BMI
         {
             InitializeComponent();
         }
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            
+            string s1 = weight.Text;
+            string s2 = height.Text;
+            double w = int.Parse(s1);
+            double h = int.Parse(s2);
+            double BMI = (w / (h * h))*10000;
+            
+            Label.Text = "BMI値l =" + BMI.ToString("F1");
+
+        }
     }
 }
